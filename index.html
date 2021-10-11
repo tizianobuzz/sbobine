@@ -20,7 +20,7 @@
     function whenC(number, corso) {
       message = 'Ciao, ho visto le tue sbobine di '+corso+' sul sito, vorrei sapere se sono ancora disponibili. Grazie!'
       console.log('https://wa.me/39'+number+'?text='+encodeURIComponent(message))
-      gtag('event', 'select_content', {'event_label': corso, 'event_callback' : function(){
+      gtag('event', 'select_content', {'event_label': corso, 'event_name' : 'requested', 'event_callback' : function(){
         window.open('https://wa.me/39'+number+'?text='+encodeURIComponent(message))
       }});
     }
